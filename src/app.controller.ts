@@ -7,4 +7,10 @@ export class AppController {
   home() {
     return {};
   }
+
+  @Get('/about')
+  @Render('about')
+  about() {
+    return {};
+  }
 }
