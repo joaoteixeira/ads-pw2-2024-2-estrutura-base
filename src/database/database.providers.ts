@@ -1,4 +1,5 @@
 import { DataSource } from 'typeorm';
+import { SnakeNamingStrategy } from 'typeorm-naming-strategies';
 
 export const databaseProviders = [
   {
@@ -12,6 +13,7 @@ export const databaseProviders = [
         password: 'root',
         database: 'tarefas_db',
         entities: [__dirname + '/../**/*.entity{.ts,.js}'],
+        namingStrategy: new SnakeNamingStrategy(),
         synchronize: true,
       });
 
